@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "EGR eBook Analytics Dashboard"
-date:   2014-10-23 18:00:00
+date:   2014-10-24 18:00:00
 categories: jekyll 
 ---
 ###**Project Intro**
