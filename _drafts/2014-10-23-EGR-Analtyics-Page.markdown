@@ -35,9 +35,18 @@ Created entirely on the front-end with Javascript, CSS, and HTML, the following 
 {% endhighlight %}
 
 
-###**Visual Design**
-The visual design and styling I coded up were based upon pdf mark-ups provided by one of EGR's founders.  Making fairly liberal use of built-in Bootstrap components, with a few adjustments or work-arounds as needed to provide non-standard functionality.  The scrollable table at the bottom was one such case  
+###**Visual Design and Interactivity**
+The visual design and styling I coded up were based upon pdf mark-ups provided by one of EGR's founders.  Making fairly liberal use of built-in Bootstrap components, with a few adjustments or work-arounds as needed to provide non-standard functionality.  The "Breakdown by Book" table at the bottom of the page was one such case, as there's no built-in functionality for scrollable tables with fixed headers.  [Which is apparently intentional since it's a bit of a pian, see discussion here.](https://github.com/twbs/bootstrap/issues/12780)
 
+JQuery bindings provided most of the interactive functionality.  The various graph data-type and date-range radio buttons would fire off an AJAX request as needed and selectively reload portions of the page (e.g. graph and table contents).  Below are two gifs showing a pair of states for the graph and table.
+
+**Graph data type and date range toggles**
+
+![Graph Gif](/blog/assets/posts/EGR-analytics-top-half.gif)
+
+**Table individual-book filter and word-lookup expansion toggle**
+
+![Graph Gif](/blog/assets/posts/EGR-analytics-bottom-half.gif)
 
 ###**Analytics Page Functionality Overview**
 
