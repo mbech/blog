@@ -4,4 +4,4 @@ title: About
 permalink: /about/
 ---
 
-This blog is a work in progress.
+This blog is currently a work in progress, along with my website: [mbech.net](http://mbech.net)
