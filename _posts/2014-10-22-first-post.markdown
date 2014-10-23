@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "My Blog Launch: Jekyll, Md, and Why"
+title:  "My Blog Launch: Jekyll, Md, and Why in the First Place"
 date:   2014-10-22 20:00:00
 categories: jekyll 
 ---
-###**Setting up**
+###**Setting things up...**
 After reading up on [Jekyll, a 'simple, blog-aware, static site generator'](http://jekyllrb.com/docs/home/), and a brief review of [Markdown syntax](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet), it's finally time to actually pick some topics and write about them.  
 
 Though completely customizable, Jekyll makes it very easy to simply jump in using the default settings and start blogging.  Given the option, I opted not to spend time playing around with styling Jekyll at this point, (thought it sounds like a great excuse to avoid writing that I may resort to in the future).
@@ -14,7 +14,7 @@ For the same reason (incredibly simple to get up and running)
 **In the spirit of focusing on content over presentation, my first post seems like a great opportunity to document my motivations and goals for this blog.**
 
 
-###**The Reasons I decided to start writing this:**
+###**The reasons I decided to start writing this:**
 
 1. **To practice conveying technical/complicated concepts as simply as I can**
 
