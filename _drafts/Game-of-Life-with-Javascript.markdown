@@ -4,6 +4,8 @@ title:  "Game of Life in Javascript"
 date:   2014-10-25 20:00:00
 categories: jekyll 
 ---
+![GoLJS](/blog/assets/posts/GoLJS-strip.png)
+
 ###**What are we talking about?**
 I coded up a fairly well known mathematical "cellular automata" in Javascript, HTML, and CSS.  Here's a link to the running site:
 
@@ -22,24 +24,24 @@ example, one rule states that:
 
 * Any live cell with two or three live neighbours lives on to the next generation.
 
-EXAMPLE:
+EXAMPLE - Cell Living On:
 
 ![cell rule example - live](/blog/assets/posts/GoLJS-cell-layout-live.png)
 
 
-*The live middle cell, with two living neighbors, will be alive next round*
+*The live center cell, with two living neighbors, will be alive next round*
 
 
 While another rule states:
 
 * Any live cell with more than three live neighbours dies, as if by overcrowding.
 
-EXAMPLE:
+EXAMPLE - Doomed Cell:
 
 ![cell rule example - die](/blog/assets/posts/GoLJS-cell-layout-die.png)
 
 
-*The middle cell, with four neighbors, will be dead next round*
+*The same live center cell, now with four neighbors, will be dead next round due to 'overcrowding'*
 
 By combining these with a few other rules, the next state of any cell is determined by
 the current state of its 8 surrounding neighbors.  It's really more of a mathmateical 
