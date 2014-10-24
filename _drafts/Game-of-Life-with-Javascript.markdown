@@ -4,25 +4,48 @@ title:  "Game of Life in Javascript"
 date:   2014-10-25 20:00:00
 categories: jekyll 
 ---
-###**Game of Life... What?**
+###**What are we talking about?**
+I coded up a fairly well known mathematical "cellular automata" in Javascript, HTML, and CSS.  Here's a link to the running site:
+
+[Game of Life - Javascript](mbech.net/Game-of-life-JS.html)
+
+This post is about the creation of that page along with some code snippets and my thoughts.  The code is all public on GitHub, here's a link to the repository:
+
+[GoLJS Source Code](https://github.com/mbech/GoLJS)
+
+###**Description of the "Game"**
 [Conway's Game of Life](http://en.wikipedia.org/wiki/Conway's_Game_of_Life) is a
 mathmatical grid-based "game" in which cells on the grid can exist in two
 states: alive or dead.  After an initial input (settin some cells as alive), the
 game proceeds to the next state by applying rules on a cell-by-cell basis.  For
 example, one rule states that:
 
-* Any live cell with fewer than two live neighbours dies, as if caused by
-under-population.
-
-While another states:
-
 * Any live cell with two or three live neighbours lives on to the next generation.
 
-By combining these and other rules, the next state of a cell is determined by
-the current state of it's 8 direct neighbors.  It's really more of a mathmateical 
+EXAMPLE:
+
+![cell rule example - live](/blog/assets/posts/GoLJS-cell-layout-live.png)
+
+
+*The live middle cell, with two living neighbors, will be alive next round*
+
+
+While another rule states:
+
+* Any live cell with more than three live neighbours dies, as if by overcrowding.
+
+EXAMPLE:
+
+![cell rule example - die](/blog/assets/posts/GoLJS-cell-layout-die.png)
+
+
+*The middle cell, with four neighbors, will be dead next round*
+
+By combining these with a few other rules, the next state of any cell is determined by
+the current state of its 8 surrounding neighbors.  It's really more of a mathmateical 
 progression from a predefined starting arrangement of cells than a true "game".
 
-###**Ok on what, but Game of Life... Why?**
+###**'Ok' on what, but why?**
 I chose to start this project a few months ago. At that time, producing a simple game in javascript seemed like a
 great way to get more experience coding in JS and doing a lot of DOM
 manipulation with JQuery.  Soon after starting, I ended shelving the project for a few
