@@ -49,18 +49,18 @@ progression from a predefined starting arrangement of cells than a true "game".
 
 ###**Why make this?**
 I chose to start this project a few months ago. At that time, producing a simple game in javascript seemed like a
-great way to get more experience coding in JS and doing a lot of DOM
+great way to get more experience coding in JavaScript and doing a lot of DOM
 manipulation with JQuery.  Soon after starting, I ended shelving the project for a few
-months to do some freelance web dev work.  I read some books on JS, most notably the oft-recommended [Javascript the Good
+months to do some freelance web dev work.  I read some books on JavaScript, most notably the oft-recommended [Javascript the Good
 Parts](http://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742)
  along with 
 [Javascript Enlightment](http://www.amazon.com/JavaScript-Enlightenment-Cody-Lindley/dp/1449342884).
 
-Feeling more confident in my JS knowledge and looking for somewhere to appy it,
+Feeling more confident in my JavaScript knowledge and looking for somewhere to appy it,
 I decided to revive Game of Live - Javascript (*GoLJS*) and attempt to complete it.  
 
 ###**Mostly Pure HTML/CSS/JS, with a sprinkling of...**
-* [JQuery](http://jquery.com/) - The ubiquitous and versatile JS library.  I'd included this when originally starting the project, but ended up only using it for basic DOM binding and manipulation. I may take it out and use vanilla JS later on as an exercise.
+* [JQuery](http://jquery.com/) - The ubiquitous and versatile JavaScript library.  I'd included this when originally starting the project, but ended up only using it for basic DOM binding and manipulation. I may take it out and use vanilla JavaScript later on as an exercise.
 * [normalize.css](http://necolas.github.io/normalize.css/) - "A modern, HTML5-ready alternative to CSS resets", I included this to minimize cross-browser styling headaches and focus on the actual GoL implementation.
 
 This is a small project, so I opted to use pure css rather than my go-to Sass/SCSS preprocessor (which I definitely missed as the number of elements to style grew).  
@@ -85,7 +85,7 @@ Here's the current file structure:
 
 *Directory list created by [tree](http://mama.indstate.edu/users/ice/tree/), a recursive directory display for linux*
 
-Pretty straightforward. I tried to keep the JS modular, with each file containing functions to handle its specific domain:
+Pretty straightforward. I tried to keep the JavaScript modular, with each file containing functions to handle its specific domain:
 
 * automater.js handles the time-step advance of the board state (more about this further below)
 * bindings.js contains all of the event (e.g. on click) bindings
@@ -93,9 +93,28 @@ Pretty straightforward. I tried to keep the JS modular, with each file containin
 * game_board.js stores a board object, with all sorts of functions to deal with current and future cell states
 * view.js is responsible for rereshing visual elements on the page following a board state-change
 
+[Link to all files on GitHub](https://github.com/mbech/GoLJS)
+
+
 ###**Automating board updates with setInterval()**
 
+One necessary feature was to provide a way to automatically advance the game state at set time intervals, also allowing the user to pause/resume at any point.  
 
+I'd played around making games in C# using Microsoft's XNA Game Studio a few years back, and had always used pauses/sleeps within methods to delay execution when in a loop.  In JavaScript, my initial attempt looked something like this:
+
+```javascript
+function automate.loop(refresh_interval_in_ms){
+  while(automate.active){
+  	//update the game state, refresh the display
+    board.update;
+    view.refresh(board);
+    
+    //now wait for awhile (refresh_interval_in_ms) before doing it again
+    sleep(refresh_interval_in_ms - however_long_above_code_took_to_run);
+  }
+}
+
+```
 
 ###**Closing thought**
 Text
