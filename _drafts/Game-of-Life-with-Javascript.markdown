@@ -47,29 +47,62 @@ By combining these with a few other rules, the next state of any cell is determi
 the current state of its 8 surrounding neighbors.  It's really more of a mathmateical 
 progression from a predefined starting arrangement of cells than a true "game".
 
-###**'Ok' on what, but why?**
+###**Why make this?**
 I chose to start this project a few months ago. At that time, producing a simple game in javascript seemed like a
 great way to get more experience coding in JS and doing a lot of DOM
 manipulation with JQuery.  Soon after starting, I ended shelving the project for a few
-months during which I read up on JS (the oft-recommended [Javascript the Good
+months to do some freelance web dev work.  I read some books on JS, most notably the oft-recommended [Javascript the Good
 Parts](http://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742)
  along with 
-[Javascript Enlightment](http://www.amazon.com/JavaScript-Enlightenment-Cody-Lindley/dp/1449342884)).
+[Javascript Enlightment](http://www.amazon.com/JavaScript-Enlightenment-Cody-Lindley/dp/1449342884).
+
 Feeling more confident in my JS knowledge and looking for somewhere to appy it,
-I decided to pick Game of Live (GoL) back up and run with it.  
+I decided to revive Game of Live - Javascript (*GoLJS*) and attempt to complete it.  
 
-1. **OL**
+###**Mostly Pure HTML/CSS/JS, with a sprinkling of...**
+* [JQuery](http://jquery.com/) - The ubiquitous and versatile JS library.  I'd included this when originally starting the project, but ended up only using it for basic DOM binding and manipulation. I may take it out and use vanilla JS later on as an exercise.
+* [normalize.css](http://necolas.github.io/normalize.css/) - "A modern, HTML5-ready alternative to CSS resets", I included this to minimize cross-browser styling headaches and focus on the actual GoL implementation.
 
-* UL 
+This is a small project, so I opted to use pure css rather than my go-to Sass/SCSS preprocessor (which I definitely missed as the number of elements to style grew).  
+
+###**Code organization**
+Here's the current file structure:
+
+		GoLJS
+		├── css
+		│   └── main.css
+		├── index.html
+		├── js
+		│   ├── automater.js
+		│   ├── bindings.js
+		│   ├── controller.js
+		│   ├── game_board.js
+		│   └── view.js
+		├── README.md
+		└── todo.txt
+
+
+		2 directories, 9 files
+
+*Output courtesy of [tree](http://mama.indstate.edu/users/ice/tree/), a recursive directory display for the terminal*
+
+Pretty straightforward. I tried to keep the JS modular, with each file containing functions to handle its specific domain:
+
+* automater.js handles the time-step advance of the board state (more about this further below)
+* bindings.js contains all of the event (e.g. on click) bindings
+* controller.js simply calls to initialize the board/bindings and sets up the demo cell pattern on page load
+* game_board.js stores a board object, with all sorts of functions to deal with current and future cell states
+* view.js is responsible for rereshing visual elements on the page following a board state-change
+
+###**Automating board updates with setInterval()**
+
+
 
 ###**Closing thought**
 Text
 
 
 section ideas:
-why GoL? as intro
-
-using JQuery, may redo without to see difference, using normalize.css
 
 complication of cell next state rules, discuss how it's buggy, wonder if better
 solution exists (maybe due to 1-D array)?
