@@ -81,10 +81,9 @@ Here's the current file structure:
 		├── README.md
 		└── todo.txt
 
+		2 directories, 9 files		
 
-		2 directories, 9 files
-
-*Output courtesy of [tree](http://mama.indstate.edu/users/ice/tree/), a recursive directory display for the terminal*
+*Directory list created by [tree](http://mama.indstate.edu/users/ice/tree/), a recursive directory display for linux*
 
 Pretty straightforward. I tried to keep the JS modular, with each file containing functions to handle its specific domain:
 
