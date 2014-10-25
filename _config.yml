@@ -10,3 +10,4 @@ github_username: mbech
 
 # Build settings
 markdown: redcarpet
+highlighter: pygments
