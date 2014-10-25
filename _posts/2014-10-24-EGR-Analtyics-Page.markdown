@@ -27,8 +27,7 @@ NVD3 certainly takes some getting used to, and with essentially no documentation
 * [Sass/SCSS](http://sass-lang.com/) CSS-generating extension that preprocesses SCSS files.  Adds a bunch of great functionality to keep styling more concise and easy to maintain.  I mostly made use of the variables functionality, which allows you to declare a value and reuse it throughout your SCSS.  For example, with colors:  
 
 
-
-{% highlight scss %}
+```scss
 // color bank
 //--------------------------------------------------
   $bgDefault      : #fefdfd;
@@ -41,8 +40,7 @@ NVD3 certainly takes some getting used to, and with essentially no documentation
 h2{
 color: $egrTeal;
 }
-{% endhighlight %}
-
+```
 
 ###**Visual Design and Interactivity**
 The visual design and styling I coded up were based upon pdf mark-ups provided by one of EGR's founders.  Making fairly liberal use of built-in Bootstrap components, with a few adjustments or work-arounds as needed to provide non-standard functionality.  The "Breakdown by Book" table at the bottom of the page was one such case, as there's no built-in functionality for scrollable tables with fixed headers.  [Which is apparently intentional __because__ it's a pain, see discussion here.](https://github.com/twbs/bootstrap/issues/12780)
@@ -66,7 +64,7 @@ Functionality was broken up across multiple js files, such as "graph_generator.j
 
 Here's an example from table_update.js, using JQuery to refresh the HTML table based on the most recent server data:
 
-{% highlight javascript linenos%}
+```javascript
 table.refreshRows = function(){
     //wipe out existing rows
     $('#read-log-tbody').empty()
@@ -77,7 +75,7 @@ table.refreshRows = function(){
       table.addTableRow(reading_logs[index])
     })
     //etc.
-{% endhighlight %}
+```
 
 This particular function is an example of using clear naming and a limited effect to pin down exactly what happens upon being called.  It also shows some useful basic JQuery (the functions preceeded with the JQuery "$").
 
