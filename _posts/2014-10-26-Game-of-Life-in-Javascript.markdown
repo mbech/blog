@@ -103,14 +103,14 @@ One necessary feature was to provide a way to automatically advance the game sta
 I'd played around making games in C# using Microsoft's XNA Game Studio a few years back, and had always used pauses/sleeps within methods to delay execution when in a [game loop](http://gameprogrammingpatterns.com/game-loop.html).  In JavaScript, my initial attempt looked something like this:
 
 ```javascript
-function automate.loop(refresh_interval_in_ms){
+automate.loop = function(refresh_interval){
   while(automate.active){
   //update the game state, refresh the display
   board.nextState();
   view.refresh(board);
 	
-  //now wait for awhile (refresh_interval_in_ms) before doing it again
-  sleep(refresh_interval_in_ms);
+  //now wait the interval before looping again
+  sleep(refresh_interval);
   //note: sleep() function doesn't actually exist...
   }
 }
@@ -123,7 +123,6 @@ With Javascript, however, is a single-thread model based on triggering asynchron
 [setTimeout](https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers.setTimeout) takes two arguments, a callback function, and a delay in milliseconds afterwhich to trigger that callback.
 
 To make the above game loop work using setTimeout(), you need to split up the code across two functions: one function to set up the timeout, and a callback function to execute once the timeout triggers.  In order to have a more responsive pause, I also added a flag on the callback to cancel the execution if automate had been paused.  Here are the two functions:
-
 
 ```javascript
 automate.loop = function(){
@@ -138,6 +137,7 @@ automate.advance = function(){
   }
 };
 ```
+
 No longer using a while loop, instead the callback calls the original timeout-setting function.
 
 ###**Other code of interest**
@@ -150,9 +150,7 @@ board.nextCellState = function (cell_loc){
   var row = cell_loc[0];
   var col = cell_loc[1];
   var neighbors = [0,0,0,0,0,0,0,0]; //top, right, bottom, left, t-r, b-r, b-l, t-l
- 
  //...
- 
  //top-right neighbor check
   if(this.getState([(row + 1), (col + 1)]) === 1){
     neighbors[4] = 1;
@@ -161,7 +159,6 @@ board.nextCellState = function (cell_loc){
   if(this.getState([(row - 1), (col + 1)]) === 1){
     neighbors[5] = 1;
   }
-  
  //...
 ```
 
