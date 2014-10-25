@@ -96,39 +96,100 @@ Pretty straightforward. I tried to keep the JavaScript modular, with each file c
 [Link to all files on GitHub](https://github.com/mbech/GoLJS)
 
 
-###**Automating board updates with setInterval()**
+###**Automating board updates with setTimeout()**
 
 One necessary feature was to provide a way to automatically advance the game state at set time intervals, also allowing the user to pause/resume at any point.  
 
-I'd played around making games in C# using Microsoft's XNA Game Studio a few years back, and had always used pauses/sleeps within methods to delay execution when in a loop.  In JavaScript, my initial attempt looked something like this:
+I'd played around making games in C# using Microsoft's XNA Game Studio a few years back, and had always used pauses/sleeps within methods to delay execution when in a [game loop](http://gameprogrammingpatterns.com/game-loop.html).  In JavaScript, my initial attempt looked something like this:
 
 ```javascript
 function automate.loop(refresh_interval_in_ms){
   while(automate.active){
-  	//update the game state, refresh the display
-    board.update;
-    view.refresh(board);
-    
-    //now wait for awhile (refresh_interval_in_ms) before doing it again
-    sleep(refresh_interval_in_ms - however_long_above_code_took_to_run);
+  //update the game state, refresh the display
+  board.nextState();
+  view.refresh(board);
+	
+  //now wait for awhile (refresh_interval_in_ms) before doing it again
+  sleep(refresh_interval_in_ms);
+  //note: sleep() function doesn't actually exist...
   }
 }
+```
 
+This approach doesn't work out in JavaScript.  In C#, your code can run across multiple threads, allowing a function to go to 'sleep' or pause it's own thread without interrupting the operation of code in other threads.  
+
+With Javascript, however, is a single-thread model based on triggering asynchronous events.  If the current function goes to sleep, it hogs the sole thread and your program becomes completely unresponsive for the duration.  Because of this, JavaScript doesn't even have a pure built-in sleep function.  Instead, it has setTimeout(), and the similar setInterval().
+
+[setTimeout](https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers.setTimeout) takes two arguments, a callback function, and a delay in milliseconds afterwhich to trigger that callback.
+
+To make the above game loop work using setTimeout(), you need to split up the code across two functions: one function to set up the timeout, and a callback function to execute once the timeout triggers.  In order to have a more responsive pause, I also added a flag on the callback to cancel the execution if automate had been paused.  Here are the two functions:
+
+
+```javascript
+automate.loop = function(){
+  setTimeout(this.advance, this.timestep);
+};
+
+automate.advance = function(){
+  if (automate.active){
+    board.nextState();
+    view.refresh(board);
+    automate.loop();
+  }
+};
+```
+No longer using a while loop, instead the callback calls the original timeout-setting function.
+
+###**Other code of interest**
+####Checking on the neighbors
+The code that handled determining the next state of a cell based on its neighbors (per the game rules) was the greatest source of bugs/complications.  Here's a snippet from that function in game_board.js, within the board.nextCellState function:
+
+```javascript
+board.nextCellState = function (cell_loc){
+  //return next state of passed-in cell
+  var row = cell_loc[0];
+  var col = cell_loc[1];
+  var neighbors = [0,0,0,0,0,0,0,0]; //top, right, bottom, left, t-r, b-r, b-l, t-l
+ 
+ //...
+ 
+ //top-right neighbor check
+  if(this.getState([(row + 1), (col + 1)]) === 1){
+    neighbors[4] = 1;
+  }
+  //bottom-right neighbor check
+  if(this.getState([(row - 1), (col + 1)]) === 1){
+    neighbors[5] = 1;
+  }
+  
+ //...
+```
+
+A neighbors array was used to store the results of all the explicit checks, updating the value to 1 if that neighbor was a live cell.  It felt a bit clunky to write out all 8 neighbor cell checks, but I couldn't think of a more elegant solution.
+
+####Boundary conditions
+One final challenge was handling the boundaries of the grid.  Initially, the idea was to make the bounding edges act as 'lava', killing all cells that came in contact with it.  However, it turned out easier than expected (and more interesting) to link up the top-most row with the bottom, and left to right.  For example, a cell structure making its way across the grid from left to right, woudl find itself 'teleported' back to the left edge upon reaching the right-most border.
+
+A few simple checks in the board.getState function were all that was needed.  If a cell's neighbor check pushed it beyond the grid boundary, e.g. a top cell checking its top neighbors, the board.getState function would instead loop around and check neighbors in those columns on the bottom-most row.
+
+```javascript
+board.getState = function (cell_loc){
+  var row = cell_loc[0];
+  var col = cell_loc[1];
+
+  //special boundary cases
+  if(row === -1) { row = (this.height - 1);} //off the grid top, wrap to bot
+  if(row === this.height) { row = 0 ;} //off the grid bot, wrap to top
+  if(col === -1) { col = (this.width - 1);} //off the grid left, wrap to right
+  if(col === this.width) { col = 0 ;} //off the grid right, wrap to left
+
+  return this.state[(row * this.width + col)];
+};
 ```
 
 ###**Closing thought**
-Text
 
-
-section ideas:
-
-complication of cell next state rules, discuss how it's buggy, wonder if better
-solution exists (maybe due to 1-D array)?
-
-game logic - handling boundary behavior bug/issue
-
-use of setInterval with pair of functions, activation flag to create looping
-refresh
+This turned out to be quite a long post, but I touched on most of the points of interest.  The styling (css) took up some time, but was fairly straightforward so there's not much to discuss there.  There's certainly more that could be polished/refactored or extra features that could be tacked on, but for now I'm quite happy with where GoLJS has ended up.
 
 
 
