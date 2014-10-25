@@ -9,7 +9,7 @@ categories: jekyll
 ###**What are we talking about?**
 I coded up a fairly well known mathematical "cellular automata" in Javascript, HTML, and CSS.  Here's a link to the running site:
 
-[Game of Life - Javascript](mbech.net/Game-of-life-JS.html)
+[Game of Life - Javascript](http://mbech.net/projects/gol_js)
 
 This post is about the creation of that page along with some code snippets and my thoughts.  The code is all public on GitHub, here's a link to the repository:
 
