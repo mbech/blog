@@ -1,0 +1,4 @@
+- Turning something with JQuery to vanilla JS
+- short one on github daily commit
+- rails-related (should start a rails project anyway for inclusion on site)
+- Could easily pick feature from ruby/js that you're not familiar with, explain 
