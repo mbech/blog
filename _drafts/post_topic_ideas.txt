@@ -2,3 +2,5 @@
 - short one on github daily commit
 - rails-related (should start a rails project anyway for inclusion on site)
 - Could easily pick feature from ruby/js that you're not familiar with, explain 
+- Little Schemer! implementing/disussing any exercise/challenge with JS 
+- SQL, if any insights/revelations while reviewing
