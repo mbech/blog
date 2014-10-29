@@ -4,3 +4,5 @@
 - Could easily pick feature from ruby/js that you're not familiar with, explain 
 - Little Schemer! implementing/disussing any exercise/challenge with JS 
 - SQL, if any insights/revelations while reviewing
+- Start to jot down any questions you have to research e.g. css, js, make short
+  post based on what you figured out
