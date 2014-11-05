@@ -36,22 +36,29 @@ Lately I've been using [Noisli](http://www.noisli.com/), which is simple to use 
 
 And of course best of all: **once set, I don't have to think about it again.**
 
-###**2. Committing to Vim**
+###**2.  Switching to Vim**
 I'd attempted to start using Vim ([the esoteric and oft revered/maligned text editor](http://www.vim.org/)) cold-turkey at least twice prior, but was generally blind-sided by having to "actually get something done", forcing me to revert to more familiar tools ([Sublime Text, also awesome](http://www.sublimetext.com/)).  But the combination of Vim's classic/old-school feel along with the promise of awesome efficiency (upon achieving some level of mastery) was always enough to draw me back in.
 
 Luckily, a stint of voluntary unemployment has rescued me from the trap of 'productivity' for long enough to finally fall into the Vim.  Hurray!
 
-I won't go into a ton of detail about the configurations I'm slowly building up ([though I keep an up-to-date backup on GitHub](https://github.com/mbech/.vim)), saving deeper insights for a later post (or when they occur, whichever comes first).  Instead here's two lists:
+I won't go into a ton of detail about the configurations I'm slowly building up ([though I keep an up-to-date backup on GitHub](https://github.com/mbech/.vim)), saving 'deeper' insights (if they ever occur) for a future post.  Instead here's two non-exhaustive lists:
 
 #####Things I like about using Vim
+* Text editing clearly has the potential to be super fast and efficient (and after about a month of daily usage, really starting to see some of that)
+* Getting 'better' at Vim feels rewarding.  This is similar to learning key binds in any application, but with Vim you're essentially required (i.e. forced) to learn and use them (no cursor/menus to fall back on in the terminal).  This is also part of what makes cryptic and not-friendly to beginners.
+* I get to work in the terminal (I use [iTerm2](http://iterm2.com/) for my terminal, along with [zsh](http://www.zsh.org/)), which has had the side-effect of growing my shell knowledge/usage
+* Silly but true, it helps me to get in a 'serious' coding mindset much better than using Sublime Text does.  Probably some combination of the added challenge/opportunity to improve my efficiency along with the old-school cool factor.
 
-#####Things that helped me transition to using Vim (from Sublime Text)
 
-###**Runner-up: Standing Desk**
+And for others considering the switch:
+#####Things that helped my transition to using Vim (from Sublime Text)
+* Setting a color scheme I like ([molokai](https://github.com/tomasr/molokai), close to what I had in Sublime)
+* Start with a blank .vimrc (customization file) and add in configurations manually (so I know what's going on and have a general knowledge of the features/settings available to me).  This one is bigger than I previously thought - it really helps to chip away at all the unknown features by adding them in one at a time.
+* Attempting to revel in the learning curve and stave off frustration by keeping it fun.  Having no deadlines really helps with this last one :)
 
+###**Runner-up: Using a standing desk**
+I've included this for completeness, but the jury is still out.  
 
-###**Closing thought**
-Text
-
+I certainly enjoy the flexibility of being able to alternate standing and sitting for periods of time, but often (as in right now) I just find myself perched on the barstool with horrible posture.
 
 
