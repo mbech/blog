@@ -1,15 +1,10 @@
 ---
 layout: post
-title:  "Two Things That Help Me Work"
-date:   2014-11-04 16:00:00
+title:  "Main-title"
+date:   2014-01-01 20:00:00
 categories: jekyll 
 ---
-
-After making some changes to my work habits/environment, I wanted to do a quick
-writeup on the two that seem to have had the greatest postive impact on my
-productivity (coding and other tasks). 
-
-###****
+###**Section-title**
 TEXT
 
 1. **OL**
