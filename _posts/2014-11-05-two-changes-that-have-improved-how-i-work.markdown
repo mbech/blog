@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Two Changes That Have Improved my Work"
+title:  "Two Changes That Have Improved How I Work"
 date:   2014-11-05 16:00:00
 categories: jekyll 
 ---
