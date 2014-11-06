@@ -7,7 +7,7 @@ categories: jekyll
 
 After making some changes to my work habits/environment, I wanted to do a writeup on two that seem to have had the greatest postive impact on general productivity.  
 
-###**1. Stopped listening to Spotify while trying to do things**
+###**1. I stopped listening to Spotify while trying to do things**
 
 
 Like most, I really enjoy music. So naturally I put some on to fill my ears anytime they're not otherwise occupied.  To justify this practice, I'd checked out several posts about the productivity pros/cons, and it mostly boiled down to:
@@ -36,7 +36,7 @@ And again, best of all, **once set, I don't have to think about it again.**
 
 *side note: listening to a static playlist over and over again, while mind-numbing, may remove the drain on mental energy required to play DJ-on-the-side ([though it may present other issues](http://blog.codinghorror.com/music-to-not-code-by/)).*
 
-###**2.  Switching to Vim**
+###**2.  I switched to Vim**
 I'd attempted to start using [Vim](http://www.vim.org/) (the esoteric and oft revered/maligned text editor) at least twice prior, but was usually had to call it off when it came time to "actually get something done", forcing me to revert to a more familiar editor ([Sublime Text, still pretty great](http://www.sublimetext.com/)).  The combination of Vim's classic feel along with the promise of awesome efficiency (upon achieving some level of mastery) was always enough to draw me back in a few months later.
 
 Luckily, having time off has rescued me from having to 'be productive' for long enough to finally make the switch to Vim.  Hurray!
