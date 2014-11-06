@@ -1,22 +1,22 @@
 ---
 layout: post
-title:  "Two Changes That Help Me Work Better"
-date:   2014-11-04 16:00:00
+title:  "Two Changes That Have Improved my Work"
+date:   2014-11-05 16:00:00
 categories: jekyll 
 ---
 
-After making some changes to my work habits/environment, I wanted to do a writeup on *the two that seem to have had the greatest postive impact on my productivity* (coding and other tasks).  While there's nothing mind-blowing here, it may give you an idea for how to mix up your own work environment.
+After making some changes to my work habits/environment, I wanted to do a writeup on two changes to my environment that seem to have had the greatest postive impact on my general productivity.  While there's nothing mind-blowing here, it may give you some ideas for improving uyour own work environment.
 
 ###**1. Stopped listening to Spotify while trying to do things**
 
 
-I (like many others) really enjoy music and want it to fill my ears anytime they're not otherwise occupied.  To justify this practice, I'd checked out several posts/writeups about the pros/cons, which mostly boiled down to:
+Like most, I really enjoy music. So naturally I put some on to fill my ears anytime they're not otherwise occupied.  To justify this practice, I'd checked out several posts about the productivity pros/cons, and it mostly boiled down to:
 
 **[WORST]  Bothersome Noise <  Music or White noise < Silence [BEST]**
 
 ####Firing up Spotify, not without costs
 
-Living in an apartment complex with thin walls, firing up [Spotify](https://www.spotify.com/us/) to stream some radio became automatic before starting any task.  
+Living in an apartment complex with thin walls, firing up [Spotify](https://www.spotify.com/us/) to stream some radio became automatic before starting any task. And it was certainly effective at drowning out miscelaneous neighbor noise.
 
 While it took time to notice, I actually believe this kicked off a very distracting habit:
 
