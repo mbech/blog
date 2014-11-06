@@ -2,8 +2,8 @@
 title: mbech/blog 
 email: matt@mbech.net
 description: > # this means to ignore newlines until "baseurl:"
-  My very own generic blog for documenting things I am working on and
-  learning about.
+  My very own static blog for writing about things I'm working on and
+  learning.
 baseurl: "/blog" # the subpath of your site, e.g. /blog/
 url: "http://mbech.github.io" # the base hostname & protocol for your site
 github_username: mbech 
