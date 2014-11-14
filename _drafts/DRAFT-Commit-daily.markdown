@@ -7,7 +7,7 @@ categories: jekyll
 ###**The Void**
 A few weeks ago (41 days at the time of writing) I became irritated by the large block of empty cells on my GitHub profile's contributions summary.  I'd been half on vacation, and having working as a freelance web developer over the summer, resulting in nearly 2 months without a publicly-visible commit.
 
-
+![Daily Commit Summary](/blog/assets/posts/DailyCommit-strip.png)
 
 While I'd been committing to private repos every few days during that period, upon wrapping up my vacation I decided to try something different.
 
