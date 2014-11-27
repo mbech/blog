@@ -6,5 +6,5 @@
 - SQL, if any insights/revelations while reviewing
 - Start to jot down any questions you have to research e.g. css, js, make short
   post based on what you figured out
-
-- Make a post about sudoku! (Could be short and link to readme)
+- Make a post about sudoku (Could be short and link to readme)
+- Javascript String Concat options (simple but useful)
