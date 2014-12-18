@@ -23,9 +23,9 @@ It's easy to include psuedo-elements in your CSS:
 ```css
 .my-class::after {
 	content: "";
-	//css-property and values to style the psuedo-element
+        //property: value;
+        //etc...
 }
-
 ```
 
 The above style would effectively insert an inline HTML element directly in front of the content of elements assigned class="my-class".  You can then use regular css properties (such as "display: block;", or "postion: absolute;") to style and place the psuedo-element as you like.
@@ -35,7 +35,7 @@ The above style would effectively insert an inline HTML element directly in fron
 ###**When should I use them, and what are the good for?**
 The value of psuedo-elements is that they help keep style-specific markup out of your HTML.  Rather than adding an extra tag in your HTML markup purely as a target for some styling, you can pull them out and achieve the same effect using only CSS.  
 
-**Basically, it's just another way to further separate CSS *styling* from HTML *content***.
+**Basically, it's just another way to further separate CSS *styling* from HTML *content*.**
 
 When using the "content" property on :before and :after elements, be careful to not go too far the other way and place content into your CSS that belongs in your HTML.
 
@@ -50,6 +50,52 @@ While the double-colon is the most recent CSS3 implementation (intended to diffe
 ###**Example: using :before and :after to draw style elements to a page**
 
 [Here's an example code snippet](http://codepen.io/anon/pen/PwzwZW?editors=110) for creating a two-piece overlay (semi-circle and carat shapes) using :before and :after psuedo-elements on a class.  
+
+Here's the HTML:
+```HTML
+<div class="top-bar"></div>
+``` 
+
+And the CSS:
+```css
+.top-bar {
+  position: relative; 
+  width: 100%;
+  height: 200px;
+  background-color: grey;
+  }
+
+ .top-bar:after {
+    content: "";
+    background-color: white;
+    border-top-right-radius: 2em;
+    border-top-left-radius: 2em;
+    bottom: 0;
+    display: block;
+    height: 2em;
+    left: 50%;
+    margin-left: -2em;
+    position: absolute;
+    width: 4em;
+  }
+
+ .top-bar:before {
+    content: "";
+    border-color: blue;
+    border-style: solid;
+    border-width: 0 .5em .5em 0;
+    bottom: .2em;
+    display: block;
+    height: 1em;
+    left: 50%;
+    margin-left: -.75em;
+    position: absolute;
+    transform: rotate(45deg);
+    width: 1em;
+    z-index: 1;
+  }
+} 
+```
 
 It respositions nicely with changing window widths, and scales well with different font-sizes.  As it's purely a stylistic element, it's great to be able to represent this purely in CSS, without having to clutter up the HTML with style-only elements.
 
