@@ -21,7 +21,7 @@ I'll be focusing on ":before" and ":after", but check out the [MDN dev page](htt
 It's easy to include psuedo-elements in your CSS:
 
 ```css
-.my-class::after {
+.my-class:after {
 	content: "";
         //property: value;
         //etc...
