@@ -110,4 +110,7 @@ containing parent rather than the window).
   }
 ```
 
+####The Result:
+![Psuedo-element-example](/blog/assets/posts/PE-psuedo-element-example.jpg)
+
 The psuedo-elements respositions nicely with changing window widths, and the result scales well with different font-sizes.  As it's purely a stylistic element, it's great to be able to represent this purely in CSS, without having to clutter up the HTML with style-only elements.
