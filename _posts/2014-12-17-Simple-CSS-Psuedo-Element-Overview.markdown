@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "A Simple Summary of CSS Psuedo-Elements"
+title:  "A Simple Overview of CSS Psuedo-Elements"
 date:   2014-12-16 20:00:00
 categories: jekyll 
 ---
