@@ -52,6 +52,7 @@ While the double-colon is the most recent CSS3 implementation (intended to diffe
 [Here's an example code snippet](http://codepen.io/anon/pen/PwzwZW?editors=110) for creating a two-piece overlay (semi-circle and carat shapes) using :before and :after psuedo-elements on a class.  
 
 Here's the HTML:
+
 ```html
 <div class="top-bar"></div>
 ``` 
@@ -61,6 +62,7 @@ And the CSS:
 General styling for the header portion of the page (note: position: relative; so
 that the absolute positioning of the psuedo-elements is 'relative' to the
 containing parent rather than the window).
+
 ```css
 .top-bar {
   position: relative; 
@@ -71,6 +73,7 @@ containing parent rather than the window).
 ```
 
 :after psuedo-element to create a semi-circle.
+
 ```css
  .top-bar:after {
     content: "";
@@ -88,6 +91,7 @@ containing parent rather than the window).
 ```
 
 :before psuedo-element to create a carat.
+
 ```css
  .top-bar:before {
     content: "";
