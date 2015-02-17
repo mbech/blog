@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Vim Progress after Several Months"
-date:   2014-02-17 20:00:00
+date:   2015-02-17 20:00:00
 categories: jekyll 
 ---
 ###**The journey so far**
